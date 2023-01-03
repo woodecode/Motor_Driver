@@ -1,0 +1,12 @@
+
+.vscode/
+
+test/project_1/MDK-ARM/**
+!test/project_1/MDK-ARM/project.uvoptx
+!test/project_1/MDK-ARM/project.uvprojx
+!test/project_1/MDK-ARM/startup_stm32f103xe.s
+
+test/project_2/MDK-ARM/**
+!test/project_2/MDK-ARM/project.uvoptx
+!test/project_2/MDK-ARM/project.uvprojx
+!test/project_2/MDK-ARM/startup_stm32f103xe.s
