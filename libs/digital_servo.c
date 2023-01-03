@@ -27,7 +27,8 @@ void Servo_Init(Servo_InitTypeDef* handle,uint32_t id,
 
 void Servo_SetAngle(Servo_InitTypeDef* handle, uint16_t angle)
 {
-    
+    handle->id = handle->id;
+	angle = angle;
 }
 
 void Servo_Start(Servo_InitTypeDef* handle)
