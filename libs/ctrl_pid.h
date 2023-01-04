@@ -9,7 +9,8 @@ extern "C"{
 typedef struct {
     /* pid parameter */
 	float Kp, Ki, Kd;
-
+    int _use_output_limit;
+    int _use_integr_limit;
     float i_max, i_min;
     float o_max, o_min;
 
@@ -25,6 +26,10 @@ void PID_Del(PID_InitTypeDef* handle);
 void PID_Initialize(
     PID_InitTypeDef* handle,
     float Kp, float Ki, float Kd);
+
+void PID_SetLimits(PID_InitTypeDef* handle,
+                int use_o_limit, float o_min, float o_max,
+                int use_i_limit, float i_min, float i_max);
 
 float PID_Compute(
     PID_InitTypeDef*handle,
