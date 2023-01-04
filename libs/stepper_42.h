@@ -18,7 +18,9 @@ typedef enum {
 typedef struct {
 
     uint32_t id;
-    
+    uint16_t rpm;
+    uint32_t pos;
+
     A4988_InitTypeDef* driver;
     AS5600_InitTypeDef* encoder;
     PID_InitTypeDef* pid;
@@ -43,8 +45,6 @@ void StepMotor42_Initialize(StepMotor42_InitTypeDef* handle,
     3.三次函数加速：步进电机从起始位置开始使用三次函数加速，然后保持目标速度。
     4.自然加速：步进电机从起始位置开始使用自然加速，然后保持目标速度。
     5.其他加速方式：还有其他许多加速方式，如使用五次函数加速、使用 S 形加速等。
-
-    步进电机的加速方式取决于电机的性能、系统的需求和应用的特定要求。
 */
 
 void StepMotor42_Run_toSpeed(StepMotor42_InitTypeDef* handle, 
@@ -53,6 +53,9 @@ void StepMotor42_Run_toSpeed(StepMotor42_InitTypeDef* handle,
 void StepMotor42_Run_toHome(StepMotor42_InitTypeDef* handle);
 
 void StepMotor42_Run_toPosition(StepMotor42_InitTypeDef* handle, 
+                            uint32_t angle,ClockDirection dir);
+
+void StepMotor42_Run_incAngle(StepMotor42_InitTypeDef* handle, 
                             uint32_t angle,ClockDirection dir);
 
 #ifdef __cplusplus

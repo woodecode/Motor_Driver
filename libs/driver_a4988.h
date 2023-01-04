@@ -93,6 +93,8 @@ void A4988_SetSpeed(A4988_InitTypeDef *handle, uint16_t rpm);
 
 void A4988_SetDirection(A4988_InitTypeDef *handle, ClockDirection dir);
 
+void A4988_Start(A4988_InitTypeDef *handle);
+
 void A4988_RunStep(A4988_InitTypeDef *handle);
 void A4988_RunRotate(A4988_InitTypeDef *handle);
 void A4988_Enable(A4988_InitTypeDef *handle);

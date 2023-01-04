@@ -44,4 +44,9 @@ void A4988_SetDirection(A4988_InitTypeDef *handle, ClockDirection dir)
     handle->_FUNC_SET_DIRECTION(handle->id, dir);
 }
 
+void A4988_Start(A4988_InitTypeDef *handle)
+{
+    handle->_FUNC_PWM_START(handle->id);
+}
+
 /* End */
