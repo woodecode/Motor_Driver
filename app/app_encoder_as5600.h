@@ -1,5 +1,5 @@
-#ifndef _APP_A4988_H_
-#define _APP_A4988_H_
+#ifndef _APP_AS5600_H_
+#define _APP_AS5600_H_
 
 #ifdef __cplusplus
 extern "C"{
