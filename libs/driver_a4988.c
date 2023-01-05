@@ -20,6 +20,7 @@ void A4988_Initialize(A4988_InitTypeDef *handle,
                     A4988_Func (* func_pwm_start)(uint32_t),
 	                A4988_Func (* func_pwm_pause)(uint32_t))
 {
+    /* initialize parameters */
     handle->id = id;
     handle->microStep = microStep;
 
@@ -30,6 +31,7 @@ void A4988_Initialize(A4988_InitTypeDef *handle,
     handle->_FUNC_PWM_PAUSE     = func_pwm_pause;
     handle->_FUNC_PWM_SET_SPEED = func_pwm_set_speed;
 
+    /* execute hardware initialization code */
     handle->_FUNC_GPIO_INIT(handle->id);
     handle->_FUNC_PWM_INIT(handle->id);
 }

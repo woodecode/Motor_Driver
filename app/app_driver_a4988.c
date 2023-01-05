@@ -1,9 +1,6 @@
 #include "driver_a4988.h"
 #include "app_driver_a4988.h"
 
-#define ID_A4988_1 16547965
-
-
 A4988_Func app_a4988_func_gpio_init(uint32_t id)
 {
     switch (id)
