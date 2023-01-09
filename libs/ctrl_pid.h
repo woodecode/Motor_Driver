@@ -2,8 +2,9 @@
 #define _CTRL_PID_H_
 
 #ifdef __cplusplus
-extern "C"{
+extern "C" {
 #endif //__cplusplus
+
 #include <stdint.h>
 
 typedef struct {
@@ -23,9 +24,8 @@ typedef struct {
 PID_InitTypeDef* PID_New(void);
 void PID_Del(PID_InitTypeDef* handle);
 
-void PID_Initialize(
-    PID_InitTypeDef* handle,
-    float Kp, float Ki, float Kd);
+void PID_Initialize(PID_InitTypeDef* handle,
+                float Kp, float Ki, float Kd);
 
 void PID_SetLimits(PID_InitTypeDef* handle,
                 int use_o_limit, float o_min, float o_max,

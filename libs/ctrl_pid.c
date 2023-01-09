@@ -11,7 +11,7 @@ void PID_Del(PID_InitTypeDef* handle)
     free(handle);
 }
 
-void PID_Init(PID_InitTypeDef* handle,
+void PID_Initialize(PID_InitTypeDef* handle,
             float Kp, float Ki, float Kd)
 {
     handle->Kd = Kd;

@@ -13,7 +13,16 @@ void Main(void)
 {
 	A4988_InitTypeDef* driver= A4988_New();
 	PID_InitTypeDef*  pid= PID_New();
+    PID_Initialize(pid, 0.6, 0, 0.3);
 	
+    A4988_Initialize(driver,ID_A4988_1,16,
+                    app_a4988_func_gpio_init,
+                    app_a4988_func_set_dir,
+                    app_a4988_func_pwm_init,
+                    app_a4988_func_pwm_set_speed,
+                    app_a4988_func_pwm_start,
+                    app_a4988_func_pwm_pause);
+
 	A4988_Del(driver);
 	PID_Del(pid);
 	
