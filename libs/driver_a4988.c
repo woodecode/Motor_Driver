@@ -51,4 +51,9 @@ void A4988_Start(A4988_InitTypeDef *handle)
     handle->_FUNC_PWM_START(handle->id);
 }
 
+void A4988_Pause(A4988_InitTypeDef *handle)
+{
+    handle->_FUNC_PWM_PAUSE(handle->id);
+}
+
 /* End */

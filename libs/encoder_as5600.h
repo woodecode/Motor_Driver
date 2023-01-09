@@ -19,8 +19,6 @@ const float AS5600_RAW_TO_RADIANS   = PI * 2.0 / 4096;
 const float AS5600_RAW_TO_RPM       = 60 / 4096;
 
 
-
-
 typedef void AS5600_Func;
 typedef uint16_t AS5600_Data;
 

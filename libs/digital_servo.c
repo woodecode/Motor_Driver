@@ -27,8 +27,10 @@ void Servo_Init(Servo_InitTypeDef* handle,uint32_t id,
 
 void Servo_SetAngle(Servo_InitTypeDef* handle, uint16_t angle)
 {
-    handle->id = handle->id;
-	angle = angle;
+    /* 0°~180° */
+    uint32_t duty = 0;
+    
+    handle->_FUNC_PWM_Set_DutyCycle(handle->id, duty);
 }
 
 void Servo_Start(Servo_InitTypeDef* handle)
