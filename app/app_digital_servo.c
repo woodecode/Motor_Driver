@@ -61,4 +61,16 @@ Servo_Func app_servo_func_pwm_pause(uint32_t id)
     }
 }
 
+Servo_Func app_servo_func_set_angle(uint32_t id)
+{
+    switch (id)
+    {
+    case ID_Servo_1:
+        /* code */
+        break;
+    default:
+        break;
+    }
+}
+
 /*End*/

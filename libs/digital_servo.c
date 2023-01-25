@@ -11,7 +11,7 @@ void Servo_Del(Servo_InitTypeDef* handle)
     free(handle);
 }
 
-void Servo_Init(Servo_InitTypeDef* handle,uint32_t id,
+void Servo_Initialize(Servo_InitTypeDef* handle,uint32_t id,
                 Servo_Func (* _func_pwm_init)(uint32_t id),
                 Servo_Func (* _func_pwm_set_dutycycle)(uint32_t id, uint16_t duty),
                 Servo_Func (* _func_pwm_start)(uint32_t id),
@@ -23,6 +23,8 @@ void Servo_Init(Servo_InitTypeDef* handle,uint32_t id,
     handle->_FUNC_PWM_Set_DutyCycle = _func_pwm_set_dutycycle;
     handle->_FUNC_PWM_Start = _func_pwm_start;
     handle->_FUNC_PWM_Pause = _func_pwm_pause;
+
+    handle->_FUNC_PWM_Init(handle->id);
 }
 
 void Servo_SetAngle(Servo_InitTypeDef* handle, uint16_t angle)
